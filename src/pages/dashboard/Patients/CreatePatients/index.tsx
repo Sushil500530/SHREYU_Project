@@ -10,7 +10,7 @@ const CreatePatientsDashboard = () => {
                     { label: "Dashboard", path: "/dashboard/patients/create" },
                     { label: "Create Patients", path: "/dashboard/patients/create", active: true },
                 ]}
-                title={"Create Patients"}
+                title={"Patients"}
             />
             <div className="bg-primary text-white p-1">
                 <span className=" mx-3 fs-5 ">Create Patients</span>

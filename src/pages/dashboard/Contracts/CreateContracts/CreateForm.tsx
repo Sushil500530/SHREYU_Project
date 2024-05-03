@@ -46,8 +46,6 @@ const CreateForm = () => {
                         </InputGroup>
                     </Form.Group>
                 </Col>
-
-
                 <Col lg={12} md={12} sm={12} >
                     <div className="mb-2">
                         <span className="title fs-5 fw-bold mb-n4">Description</span>

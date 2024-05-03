@@ -42,6 +42,9 @@ const CreatePatientsDashboard = React.lazy(
 const HomeVisitsDashboard = React.lazy(
   () => import("../pages/dashboard/HomeVisits")
 );
+const CreateHomeVisitsDashboard = React.lazy(
+  () => import("./../pages/dashboard/HomeVisits/CreateHomeVisits")
+);
 const RoleAndUsersDashboard = React.lazy(
   () => import("../pages/dashboard/RolesAndUsers")
 );
@@ -185,6 +188,13 @@ const dashboardRoutes: RoutesProps = {
       name: "Home Visits",
       element: <HomeVisitsDashboard />,
       route: PrivateRoute,
+      children: [
+        {
+          path: "/dashboard/home-visits/create",
+          element: <CreateHomeVisitsDashboard />,
+          route: PrivateRoute,
+        },
+      ]
     },
     {
       path: "/dashboard/roles-&-users",

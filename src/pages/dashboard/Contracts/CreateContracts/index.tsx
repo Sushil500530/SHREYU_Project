@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import PageTitle from "../../../../components/PageTitle";
 import CreateForm from "./CreateForm";
 
@@ -11,7 +11,7 @@ const CreateContractsDashboard = () => {
                     { label: "Dashboard", path: "/dashboard/contracts/create" },
                     { label: "Create Contracts", path: "/dashboard/contracts/create", active: true },
                 ]}
-                title={"Create Contracts"}
+                title={"Contracts"}
             />
             <div className="bg-primary text-white p-1">
                 <span className=" mx-3 fs-5 ">Create Contracts</span>

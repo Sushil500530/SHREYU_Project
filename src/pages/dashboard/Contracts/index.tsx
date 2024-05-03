@@ -33,9 +33,9 @@ const ContractsDashboard = () => {
                             <div className="float-sm-end">
                                 <Col className="text-sm-end mt-sm-0 mt-2">
                                     <Link to="/dashboard/contracks/create">
-                                    <Button className='btn-sm fs-5'>
-                                        <i className="uil-plus me-1"></i>Create
-                                    </Button>
+                                        <Button className='btn-sm fs-5'>
+                                            <i className="uil-plus me-1"></i>Create
+                                        </Button>
                                     </Link>
                                 </Col>
                             </div>

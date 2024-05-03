@@ -5,6 +5,7 @@ import PageTitle from "../../../components/PageTitle";
 import MidItemBar from "../Contracts/MidItemBar";
 import Filtered from "./Filtered";
 import HomeVisitsTable from "./HomeVisitsTable";
+import { Link } from "react-router-dom";
 
 const HomeVisitsDashboard = () => {
     const [newTaskDetails, setNewTaskDetails] = useState<any>(null);
@@ -24,7 +25,7 @@ const HomeVisitsDashboard = () => {
             <PageTitle
                 breadCrumbItems={[
                     { label: "Dashboard", path: "/dashboard/home-visits" },
-                    { label: "HomeVisits", path: "/dashboard/home-visits", active: true },
+                    { label: "Home Visits", path: "/dashboard/home-visits", active: true },
                 ]}
                 title={"Home visits"}
             />
@@ -34,14 +35,16 @@ const HomeVisitsDashboard = () => {
                         <Card.Body>
                             <div className="float-sm-start">
                                 <label className="form-check-label">
-                                Home visits table
+                                    Home visits table
                                 </label>
                             </div>
                             <div className="float-sm-end">
                                 <Col className="text-sm-end mt-sm-0 mt-2">
-                                    <Button onClick={() => newTask("Pending", "todoTasks")}>
-                                        <i className="uil-plus me-1"></i>Create
-                                    </Button>
+                                    <Link to="/dashboard/home-visits/create">
+                                        <Button className='btn-sm fs-5'>
+                                            <i className="uil-plus me-1"></i>Create
+                                        </Button>
+                                    </Link>
                                 </Col>
                             </div>
                         </Card.Body>
