@@ -3,6 +3,7 @@ import { useState } from "react";
 import PageTitle from "../../../../components/PageTitle";
 import MidItemBar from "../../Contracts/MidItemBar";
 import RoleTable from "./RoleTable";
+import { Link } from "react-router-dom";
 // components 
 
 
@@ -38,14 +39,16 @@ const RolesDashboard = () => {
                         <Card.Body>
                             <div className="float-sm-start">
                                 <label className="form-check-label">
-                                Roles Table
+                                    Roles Table
                                 </label>
                             </div>
                             <div className="float-sm-end">
                                 <Col className="text-sm-end mt-sm-0 mt-2">
-                                    <Button onClick={() => newTask("Pending", "todoTasks")}>
-                                        <i className="uil-plus me-1"></i>Create
-                                    </Button>
+                                    <Link to="/dashboard/roles/create">
+                                        <Button className='btn-sm fs-5'>
+                                            <i className="uil-plus me-1"></i>Create
+                                        </Button>
+                                    </Link>
                                 </Col>
                             </div>
                         </Card.Body>

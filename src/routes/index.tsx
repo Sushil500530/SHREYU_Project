@@ -51,6 +51,9 @@ const RoleAndUsersDashboard = React.lazy(
 const CreateUsersDashboard = React.lazy(
   () => import("../pages/dashboard/RolesAndUsers/Users/CreateUsers")
 );
+const CreateRolesDashboard = React.lazy(
+  () => import("../pages/dashboard/RolesAndUsers/Roles/CreateRoles")
+);
 const SettingsDashboard = React.lazy(
   () => import("../pages/dashboard/Settings")
 );
@@ -210,6 +213,13 @@ const dashboardRoutes: RoutesProps = {
           name: "Roles",
           element: <RolesDashboard />,
           route: PrivateRoute,
+          children: [
+            {
+              path: "/dashboard/roles/create",
+              element: <CreateRolesDashboard />,
+              route: PrivateRoute,
+            },
+          ],
         },
         {
           path: "/dashboard/roles-&-users/users",
