@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
-import PageTitle from "../../../components/PageTitle";
-import MidItemBar from "../Contracts/MidItemBar";
-import UsersTable from "./Users/UsersTable";
+import PageTitle from "../../../../components/PageTitle";
+import MidItemBar from "../../Contracts/MidItemBar";
+import UsersTable from "./UsersTable";
+import { Link } from "react-router-dom";
 
 const UsersDashboard = () => {
     const [newTaskDetails, setNewTaskDetails] = useState<any>(null);
@@ -21,10 +22,10 @@ const UsersDashboard = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: "Dashboard", path: "/dashboard/contracts" },
-                    { label: "Contracts", path: "/dashboard/contracts", active: true },
+                    { label: "Dashboard", path: "/dashboard/users" },
+                    { label: "Users", path: "/dashboard/users", active: true },
                 ]}
-                title={"Contracts"}
+                title={"Users"}
             />
             <Row>
                 <Col xs={12}>
@@ -32,14 +33,16 @@ const UsersDashboard = () => {
                         <Card.Body>
                             <div className="float-sm-start">
                                 <label className="form-check-label">
-                                    Contracts Table
+                                    Users Table
                                 </label>
                             </div>
                             <div className="float-sm-end">
                                 <Col className="text-sm-end mt-sm-0 mt-2">
-                                    <Button onClick={() => newTask("Pending", "todoTasks")}>
-                                        <i className="uil-plus me-1"></i>Create
-                                    </Button>
+                                    <Link to="/dashboard/users/create">
+                                        <Button className='btn-sm fs-5'>
+                                            <i className="uil-plus me-1"></i>Create
+                                        </Button>
+                                    </Link>
                                 </Col>
                             </div>
                         </Card.Body>

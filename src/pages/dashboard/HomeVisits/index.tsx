@@ -8,17 +8,6 @@ import HomeVisitsTable from "./HomeVisitsTable";
 import { Link } from "react-router-dom";
 
 const HomeVisitsDashboard = () => {
-    const [newTaskDetails, setNewTaskDetails] = useState<any>(null);
-    // add task 
-    const newTask = (status: string, queue: string) => {
-        setNewTaskDetails({
-            dueDate: new Date(),
-            //   userAvatar: [defaultAvatar],
-            status: status,
-            queue: queue,
-        });
-        // setNewTaskModal(true);
-    };
 
     return (
         <>
