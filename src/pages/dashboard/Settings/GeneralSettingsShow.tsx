@@ -1,6 +1,10 @@
-import { Button, Card, Col, Form, InputGroup, Row } from "react-bootstrap";
+import { Button, Card, Form, InputGroup } from "react-bootstrap";
 import FeatherIcon from 'feather-icons-react';
-
+import Tab from 'react-bootstrap/Tab';
+import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
+import Row from 'react-bootstrap/Row';
+import LogoImageForm from "./LogoImageForm";
 
 
 
@@ -11,129 +15,226 @@ const GeneralSettingsShow = () => {
         <>
             <Card>
                 <Card.Body>
-                    <div className=" bg-primary m-0rounded  d-flex align-items-start justify-content-start pt-1 rounded">
-                        <Button variant="primary" className='btn-sm d-flex align-items-center gap-1 bg-white text-black border-0'>
-                            General
-                        </Button>
-                        <Button variant="primary" className='btn-sm d-flex align-items-center gap-1 bg-primary text-white border-0'>
-                            Social
-                        </Button>
-                        <Button variant="primary" className='btn-sm d-flex align-items-center gap-1 bg-primary text-white border-0'>
-                            Logos
-                        </Button>
-                    </div>
-                    <Row>
-                        <Col lg={6} className="mt-3">
-                            <Form.Group className="mb-3" controlId="validationCustomUsername">
-                                <InputGroup hasValidation>
-                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-pencil-square"></i></InputGroup.Text>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="ExtrameLab"
-                                        aria-describedby="inputGroupPrepend"
-                                        required
-                                    />
-                                    <Form.Control.Feedback type="invalid">
-                                        Please choose a ExtrameLab.
-                                    </Form.Control.Feedback>
-                                </InputGroup>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="validationCustomUsername">
-                                <InputGroup hasValidation>
-                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-zoom-in"></i></InputGroup.Text>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="Egypt"
-                                        aria-describedby="inputGroupPrepend"
-                                        required
-                                    />
-                                    <Form.Control.Feedback type="invalid">
-                                        Please choose a Egypt.
-                                    </Form.Control.Feedback>
-                                </InputGroup>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="validationCustomUsername">
-                                <InputGroup hasValidation>
-                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-envelope"></i></InputGroup.Text>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="support1Gextremelab.tech"
-                                        aria-describedby="inputGroupPrepend"
-                                        required
-                                    />
-                                    <Form.Control.Feedback type="invalid">
-                                        Please choose a username.
-                                    </Form.Control.Feedback>
-                                </InputGroup>
-                            </Form.Group>
+                    <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                        <Row>
+                            <Col sm={12} lg={12}>
+                                <Nav variant="pills" className="flex-row bg-primary pt-1 mt-1">
+                                    <Nav.Item className="m-0 pt-1">
+                                        <Nav.Link eventKey="first" className="cursor-pointer fs-5 m-0 px-2 py-1 fw-semibold">General</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item className="m-0 pt-1">
+                                        <Nav.Link eventKey="second" className="cursor-pointer fs-5 m-0 px-2 py-1 fw-semibold">Social</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item className="m-0 pt-1">
+                                        <Nav.Link eventKey="third" className="cursor-pointer fs-5 m-0 px-2 py-1 fw-semibold">Logos</Nav.Link>
+                                    </Nav.Item>
+                                </Nav>
+                            </Col>
+                        </Row>
+                        <Col sm={12}>
+                            <Tab.Content>
+                                <Tab.Pane eventKey="first">
+                                    <Row>
+                                        <Col lg={6}>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-pencil-square"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        placeholder="ExtrameLab"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose a ExtrameLab.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-zoom-in"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        placeholder="Egypt"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose a Egypt.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-envelope"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        placeholder="support1Gextremelab.tech"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose a username.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                        </Col>
+                                        <Col lg={6}>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-currency-pound"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        placeholder="United State Dollur"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose United State Dollu.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-telephone-fill"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        placeholder="002151564251"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose a username.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><FeatherIcon icon="globe" className="w-75" /></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        placeholder="https://extremelab.tech/admin"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose a username.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col lg={12}>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-vinyl-fill"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        placeholder="All rights are reserverd ExtremeLab Company@2021"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose a username.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                        </Col>
+                                    </Row>
+                                    <Button type="submit" className="d-flex align-items-center justify-content-center gap-1">
+                                        <i className="bi bi-check-lg"></i>
+                                        Save
+                                    </Button>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="second">
+                                    <Row>
+                                        <Col lg={6}>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-facebook"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        value={"https://facebook.com"}
+                                                        placeholder="https://facebook.com"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose Facebook.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-instagram"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        value={"https://instagram.com"}
+                                                        placeholder="https://instagram.com"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose Instagram.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+
+                                        </Col>
+                                        <Col lg={6}>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-twitter"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        value={"https://twitter.com"}
+                                                        placeholder="https://twitter.com"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose Twitter.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                            <Form.Group className="mb-3" controlId="validationCustomUsername">
+                                                <InputGroup hasValidation>
+                                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-youtube"></i></InputGroup.Text>
+                                                    <Form.Control
+                                                        type="text"
+                                                        value={"https://youtube.com"}
+                                                        placeholder="https://youtube.com"
+                                                        aria-describedby="inputGroupPrepend"
+                                                        required
+                                                    />
+                                                    <Form.Control.Feedback type="invalid">
+                                                        Please choose a username.
+                                                    </Form.Control.Feedback>
+                                                </InputGroup>
+                                            </Form.Group>
+                                        </Col>
+                                    </Row>
+                                    <Button type="submit" className="d-flex align-items-center justify-content-center gap-1">
+                                        <i className="bi bi-check-lg"></i>
+                                        Save
+                                    </Button>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="third">
+                                    <Row>
+                                        <Col lg={12}>
+                                            <LogoImageForm />
+                                            <LogoImageForm />
+                                        </Col>
+                                    </Row>
+                                    <Button type="submit" className="d-flex align-items-center justify-content-center gap-1">
+                                        <i className="bi bi-check-lg"></i>
+                                        Save
+                                    </Button>
+                                </Tab.Pane>
+                            </Tab.Content>
                         </Col>
-                        <Col lg={6} className="mt-3">
-                            <Form.Group className="mb-3" controlId="validationCustomUsername">
-                                <InputGroup hasValidation>
-                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-currency-pound"></i></InputGroup.Text>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="United State Dollur"
-                                        aria-describedby="inputGroupPrepend"
-                                        required
-                                    />
-                                    <Form.Control.Feedback type="invalid">
-                                        Please choose United State Dollu.
-                                    </Form.Control.Feedback>
-                                </InputGroup>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="validationCustomUsername">
-                                <InputGroup hasValidation>
-                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-telephone-fill"></i></InputGroup.Text>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="002151564251"
-                                        aria-describedby="inputGroupPrepend"
-                                        required
-                                    />
-                                    <Form.Control.Feedback type="invalid">
-                                        Please choose a username.
-                                    </Form.Control.Feedback>
-                                </InputGroup>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="validationCustomUsername">
-                                <InputGroup hasValidation>
-                                    <InputGroup.Text id="inputGroupPrepend"><FeatherIcon icon="globe" className="w-75" /></InputGroup.Text>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="https://extremelab.tech/admin"
-                                        aria-describedby="inputGroupPrepend"
-                                        required
-                                    />
-                                    <Form.Control.Feedback type="invalid">
-                                        Please choose a username.
-                                    </Form.Control.Feedback>
-                                </InputGroup>
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={12}>
-                            <Form.Group className="mb-3" controlId="validationCustomUsername">
-                                <InputGroup hasValidation>
-                                    <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-vinyl-fill"></i></InputGroup.Text>
-                                    <Form.Control
-                                        type="text"
-                                        placeholder="All rights are reserverd ExtremeLab Company@2021"
-                                        aria-describedby="inputGroupPrepend"
-                                        required
-                                    />
-                                    <Form.Control.Feedback type="invalid">
-                                        Please choose a username.
-                                    </Form.Control.Feedback>
-                                </InputGroup>
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Button type="submit" className="d-flex align-items-center justify-content-center gap-1">
-                        <i className="bi bi-check-lg"></i>
-                        Save
-                    </Button>
+                    </Tab.Container>
                 </Card.Body>
             </Card>
         </>
