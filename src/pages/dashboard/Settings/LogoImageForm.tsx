@@ -75,7 +75,7 @@ const LogoImageForm = (props: FileUploaderProps) => {
                             <div className="dz-message needsclick text-black rounded">
                                 <input {...getInputProps()} />
                                 <Form.Group className="mb-3" controlId="validationCustomUsername">
-                                    <InputGroup hasValidation className="d-flex align-items-center justify-content-between rounded border">
+                                    <InputGroup hasValidation className="d-flex align-items-center justify-content-between rounded border text-secondary">
                                         <span className="ms-2">Choose Report Logo [100 X 100]</span>
                                         <div className="d-flex align-items-center cursor-pointer">
                                             <InputGroup.Text id="inputGroupPrepend">Browse</InputGroup.Text>
