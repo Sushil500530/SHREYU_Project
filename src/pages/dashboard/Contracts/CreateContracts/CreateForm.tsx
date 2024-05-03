@@ -1,17 +1,26 @@
 import { Button, Col, Form, InputGroup, Row } from "react-bootstrap";
-import FeatherIcons from "../../../icons/Feather";
+import SimpleMDEReact from 'react-simplemde-editor';
 
 const CreateForm = () => {
+    const delay = 1000;
+    const options = {
+        autofocus: true,
+        autosave: {
+            enabled: true,
+            uniqueId: "1",
+            delay,
+        },
+    };
     return (
         <>
             <Row>
-                <Col lg={4} md={12} sm={12} className="mt-3">
+                <Col lg={6} md={12} sm={12} className="mt-1">
                     <Form.Group className="mb-3" controlId="validationCustomUsername">
+                    <Form.Label>Title</Form.Label>
                         <InputGroup hasValidation>
-                            <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-person-fill"></i></InputGroup.Text>
                             <Form.Control
                                 type="text"
-                                placeholder="Client Name"
+                                placeholder="Contract Title"
                                 aria-describedby="inputGroupPrepend"
                                 required
                             />
@@ -20,12 +29,14 @@ const CreateForm = () => {
                             </Form.Control.Feedback>
                         </InputGroup>
                     </Form.Group>
+                </Col>
+                <Col lg={6} md={12} sm={12} className="mt-1">
                     <Form.Group className="mb-3" controlId="validationCustomUsername">
+                        <Form.Label>Discount%</Form.Label>
                         <InputGroup hasValidation>
-                            <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-geo-alt-fill"></i></InputGroup.Text>
                             <Form.Control
-                                type="text"
-                                placeholder="Address"
+                                type="number"
+                                placeholder="Contract Discoun%t"
                                 aria-describedby="inputGroupPrepend"
                                 required
                             />
@@ -35,70 +46,13 @@ const CreateForm = () => {
                         </InputGroup>
                     </Form.Group>
                 </Col>
-                <Col lg={4} md={12} sm={12} className="mt-3">
-                    <Form.Group className="mb-3" controlId="validationCustomUsername">
-                        <InputGroup hasValidation>
-                            <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-envelope-fill"></i></InputGroup.Text>
-                            <Form.Control
-                                type="text"
-                                placeholder="Email Address"
-                                aria-describedby="inputGroupPrepend"
-                                required
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                Please choose United State Dollu.
-                            </Form.Control.Feedback>
-                        </InputGroup>
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="validationCustomUsername">
-                        <InputGroup hasValidation>
-                            <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-gender-trans"></i></InputGroup.Text>
-                            <Form.Select
-                                placeholder="Select Gender"
-                                aria-describedby="inputGroupPrepend"
-                                required>
-                                <option selected >Select Gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </Form.Select>
-                            {/* </Form.Select> */}
-                            <Form.Control.Feedback type="invalid">
-                                Please choose a username.
-                            </Form.Control.Feedback>
-                        </InputGroup>
-                    </Form.Group>
 
-                </Col>
-                <Col lg={4} md={12} sm={12} className="mt-3">
-                    <Form.Group className="mb-3" controlId="validationCustomUsername">
-                        <InputGroup hasValidation>
-                            <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-telephone-fill"></i></InputGroup.Text>
-                            <Form.Control
-                                type="text"
-                                placeholder="Phone Number"
-                                aria-describedby="inputGroupPrepend"
-                                required
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                Please choose United State Dollu.
-                            </Form.Control.Feedback>
-                        </InputGroup>
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="validationCustomUsername">
-                        <InputGroup hasValidation>
-                            <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-calendar-check-fill"></i></InputGroup.Text>
-                            <Form.Control
-                                type="text"
-                                placeholder="Date of Birth"
-                                aria-describedby="inputGroupPrepend"
-                                required
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                Please choose a username.
-                            </Form.Control.Feedback>
-                        </InputGroup>
-                    </Form.Group>
+
+                <Col lg={12} md={12} sm={12} >
+                    <div className="mb-2">
+                        <span className="title fs-5 fw-bold mb-n4">Description</span>
+                    </div>
+                    <SimpleMDEReact id="1" options={options} />
                 </Col>
             </Row>
             <Button type="submit" className="d-flex align-items-center justify-content-center gap-1 mt-4">

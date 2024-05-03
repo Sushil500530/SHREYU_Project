@@ -36,6 +36,9 @@ const CreateContractsDashboard = React.lazy(
 const PatientsDashboard = React.lazy(
   () => import("../pages/dashboard/Patients")
 );
+const CreatePatientsDashboard = React.lazy(
+  () => import("../pages/dashboard/Patients/CreatePatients")
+);
 const HomeVisitsDashboard = React.lazy(
   () => import("../pages/dashboard/HomeVisits")
 );
@@ -156,6 +159,13 @@ const dashboardRoutes: RoutesProps = {
       name: "Contracts",
       element: <ContractsDashboard />,
       route: PrivateRoute,
+      children: [
+        {
+          path: "/dashboard/contracks/create",
+          element: <CreateContractsDashboard />,
+          route: PrivateRoute,
+        },
+      ]
     },
     {
       path: "/dashboard/patients",
@@ -165,7 +175,7 @@ const dashboardRoutes: RoutesProps = {
       children: [
         {
           path: "/dashboard/patients/create",
-          element: <CreateContractsDashboard />,
+          element: <CreatePatientsDashboard />,
           route: PrivateRoute,
         },
       ]
