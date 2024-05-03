@@ -18,7 +18,7 @@ const CreateUsersDashboard = () => {
             <Card>
                 <Card.Body>
                     <Row>
-                        <Col lg={12} className="mt-3">
+                        <Col lg={12}>
                             <Form.Group className="mb-3" controlId="validationCustomUsername">
                                 <InputGroup hasValidation>
                                     <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-person-fill fs-4"></i></InputGroup.Text>

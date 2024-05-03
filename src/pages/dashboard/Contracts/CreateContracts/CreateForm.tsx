@@ -1,4 +1,6 @@
 import { Button, Col, Form, InputGroup, Row } from "react-bootstrap";
+// styles
+import "easymde/dist/easymde.min.css";
 import SimpleMDEReact from 'react-simplemde-editor';
 
 const CreateForm = () => {
@@ -11,12 +13,13 @@ const CreateForm = () => {
             delay,
         },
     };
+
     return (
         <>
             <Row>
                 <Col lg={6} md={12} sm={12} className="mt-1">
                     <Form.Group className="mb-3" controlId="validationCustomUsername">
-                    <Form.Label>Title</Form.Label>
+                        <Form.Label>Title</Form.Label>
                         <InputGroup hasValidation>
                             <Form.Control
                                 type="text"
@@ -50,6 +53,7 @@ const CreateForm = () => {
                     <div className="mb-2">
                         <span className="title fs-5 fw-bold mb-n4">Description</span>
                     </div>
+                    {/* form editor  */}
                     <SimpleMDEReact id="1" options={options} />
                 </Col>
             </Row>

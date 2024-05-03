@@ -4,7 +4,7 @@ const CreatePatientsForm = () => {
     return (
         <>
             <Row>
-                <Col lg={4} md={12} sm={12} className="mt-3">
+                <Col lg={4} md={12} sm={12}>
                     <Form.Group className="mb-3" controlId="validationCustomUsername">
                         <InputGroup hasValidation>
                             <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-person-fill"></i></InputGroup.Text>
@@ -34,7 +34,7 @@ const CreatePatientsForm = () => {
                         </InputGroup>
                     </Form.Group>
                 </Col>
-                <Col lg={4} md={12} sm={12} className="mt-3">
+                <Col lg={4} md={12} sm={12}>
                     <Form.Group className="mb-3" controlId="validationCustomUsername">
                         <InputGroup hasValidation>
                             <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-envelope-fill"></i></InputGroup.Text>
@@ -69,7 +69,7 @@ const CreatePatientsForm = () => {
                     </Form.Group>
 
                 </Col>
-                <Col lg={4} md={12} sm={12} className="mt-3">
+                <Col lg={4} md={12} sm={12}>
                     <Form.Group className="mb-3" controlId="validationCustomUsername">
                         <InputGroup hasValidation>
                             <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-telephone-fill"></i></InputGroup.Text>
