@@ -6,6 +6,7 @@ import PageTitle from '../../../components/PageTitle';
 import ContractsTable from './ContractsTable';
 import MidItemBar from './MidItemBar';
 import FeatherIcon from 'feather-icons-react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,52 +47,11 @@ const ContractsDashboard = () => {
                             </div>
                             <div className="float-sm-end">
                                 <Col className="text-sm-end mt-sm-0 mt-2">
-
-                                    <Dropdown as={ButtonGroup} align="end">
-                                        <Dropdown.Toggle
-                                            variant="primary"
-                                            id="dropdown-basic"
-                                            className=" p-0"
-                                        >
-                                            <Button className='btn-sm fs-5'>
-                                                <i className="uil-plus me-1"></i>Create
-                                            </Button>
-                                        </Dropdown.Toggle>
-
-                                        <Dropdown.Menu>
-                                            <Dropdown.Item className="notify-item" href="#/">
-                                                <FeatherIcon
-                                                    icon="eye"
-                                                    className="icon-dual icon-xs me-2"
-                                                />
-                                                <span>Show</span>
-                                            </Dropdown.Item>
-                                            <Dropdown.Item className="notify-item" href="#/">
-                                                <FeatherIcon
-                                                    icon="edit"
-                                                    className="icon-dual icon-xs me-2"
-                                                />
-                                                <span>Edit</span>
-                                            </Dropdown.Item>
-                                            <Dropdown.Item className="notify-item" href="#/">
-                                                <FeatherIcon
-                                                    icon="trash-2"
-                                                    className="icon-dual icon-xs me-2"
-                                                />
-                                                <span>Delet</span>
-                                            </Dropdown.Item>
-                                            <Dropdown.Item className="notify-item" href="#/">
-                                                <FeatherIcon
-                                                    icon="filter"
-                                                    className="icon-dual icon-xs me-2"
-                                                />
-                                                <span>Clear group tests</span>
-                                            </Dropdown.Item>
-                                        </Dropdown.Menu>
-                                    </Dropdown>
-                                    {/* <Button onClick={() => newTask("Pending", "todoTasks")}>
+                                    <Link to="/dashboard/patients/create">
+                                    <Button className='btn-sm fs-5'>
                                         <i className="uil-plus me-1"></i>Create
-                                    </Button> */}
+                                    </Button>
+                                    </Link>
                                 </Col>
                             </div>
                         </Card.Body>
