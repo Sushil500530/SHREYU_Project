@@ -7,7 +7,6 @@ const CreateHomeVisitsForm = () => {
             <Row>
                 <CreateHomeCustomForm />
             </Row>
-           
         </>
     );
 };
