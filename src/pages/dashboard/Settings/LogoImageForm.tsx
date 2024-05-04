@@ -79,7 +79,7 @@ const LogoImageForm = (props: FileUploaderProps) => {
                                         <span className="ms-2">Choose Report Logo [100 X 100]</span>
                                         <div className="d-flex align-items-center cursor-pointer">
                                             <InputGroup.Text id="inputGroupPrepend">Browse</InputGroup.Text>
-                                            <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-card-image"></i></InputGroup.Text>
+                                            <InputGroup.Text id="inputGroupPrepend"><i className="bi bi-card-image text-primary"></i></InputGroup.Text>
                                         </div>
                                         <Form.Control.Feedback type="invalid">
                                             Please choose United State Dollu.
